@@ -15,7 +15,7 @@ func main() {
 loop:
 	for found := 0; found < max; {
 		n := rand.Intn(max) + 1
-		fmt.Println(n, " ")
+		fmt.Print(n, " ")
 
 		for _, u := range uniques {
 			if n == u {
@@ -26,4 +26,6 @@ loop:
 		uniques[found] = n
 		found++
 	}
+
+	fmt.Println("\n\nUniques ", uniques)
 }
