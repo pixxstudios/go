@@ -1,7 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
-	fmt.Println("Hello from main...")
+	rand.Seed(time.Now().UnixNano())
+
+	const max = 5
+	var uniques [max]int
+
+loop:
+	for found := 0; found < max; {
+		n := rand.Intn(max) + 1
+		fmt.Println(n, " ")
+
+		for _, u := range uniques {
+			if n == u {
+				continue loop
+			}
+		}
+
+		uniques[found] = n
+		found++
+	}
 }
