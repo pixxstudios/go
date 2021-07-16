@@ -7,6 +7,7 @@
     <title>Go templates</title>
 </head>
 <body>
-    Hello World
+    {{ $wisdom := .}}
+    <h3>Meaning of life is {{$wisdom}}</h3>
 </body>
 </html>
