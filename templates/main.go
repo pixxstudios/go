@@ -7,13 +7,9 @@ import (
 )
 
 func main() {
-	tpl, err := template.ParseFiles("tpl.gohtml")
+	tpl := template.Must(template.ParseGlob("*.gohtml"))
 
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	err = tpl.Execute(os.Stdout, nil)
+	err := tpl.Execute(os.Stdout, nil)
 
 	if err != nil {
 		fmt.Println(err)
