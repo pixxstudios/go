@@ -2,9 +2,9 @@ package main
 
 func main() {
 	type todo struct {
-		ID        string
-		Item      string
-		Completed bool
+		ID        string `json:"id"`
+		Item      string `json:"item"`
+		Completed bool   `json:"completed"`
 	}
 
 	todos := []todo{
