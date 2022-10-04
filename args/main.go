@@ -23,5 +23,8 @@ func main() {
 
 	sum := num1 + num2
 
+	sum1 := Sum(1, 2, 3, 4)
+	fmt.Println(sum1)
+
 	fmt.Printf("%d + %d = %d\n", num1, num2, sum)
 }
